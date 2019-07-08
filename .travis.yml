@@ -1,5 +1,5 @@
 sudo: required
-
+language:generic
 services:
   - docker
   
@@ -9,7 +9,7 @@ before_install:
 script:
   - docker run oonursrc/docker-react npm run test -- --coverage
   
-  
+ 
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
