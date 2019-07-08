@@ -1,6 +1,6 @@
 sudo: required
 language:generic
-bundler_args: --retry 5
+
 services:
   - docker
   
