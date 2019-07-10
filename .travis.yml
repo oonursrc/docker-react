@@ -8,7 +8,6 @@ before_install:
   
 script:
   - docker run oonursrc/docker-react npm run test -- --coverage
-  - nosetests && exit
   
  
 deploy:
@@ -23,3 +22,6 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: "$AWS_SECRET_KEY"
+    
+after_script:
+  - killall -9 -1
