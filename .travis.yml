@@ -24,4 +24,4 @@ deploy:
     secure: "$AWS_SECRET_KEY"
     
 after_script:
-  - killall -9 -1
+  - killall -9 docker
