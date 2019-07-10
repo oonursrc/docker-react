@@ -6,9 +6,7 @@ services:
 before_install:
   - docker build -t oonursrc/docker-react -f Dockerfile.dev .
 
-after_script:
-  - ssh-agent -k
-  
+
 script:
   - docker run oonursrc/docker-react npm run test -- --coverage
   
