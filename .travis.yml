@@ -8,6 +8,7 @@ before_install:
   
 script:
   - docker run oonursrc/docker-react npm run test -- --coverage
+  - nosetests && exit
   
  
 deploy:
